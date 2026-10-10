@@ -59,10 +59,13 @@
       <a href="#olje">Oil and prices</a>
       <a href="#kje-kupiti">Where to buy</a>
     </nav>
-    <div class="lang" role="group" aria-label="Language">
-      <a href="../sl/" lang="sl" hreflang="sl">SL</a>
-      <a href="../it/" lang="it" hreflang="it">IT</a>
-      <a href="./" lang="en" hreflang="en" aria-current="true">EN</a>
+    <div class="lang">
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label="Language: English">EN <span class="caret" aria-hidden="true">&#9662;</span></button>
+      <ul class="lang-menu" id="lang-menu" hidden>
+        <li><a href="../sl/" lang="sl" hreflang="sl">SL<span>Slovenščina</span></a></li>
+        <li><a href="../it/" lang="it" hreflang="it">IT<span>Italiano</span></a></li>
+        <li><a href="./" lang="en" hreflang="en" aria-current="true">EN<span>English</span></a></li>
+      </ul>
     </div>
     </div>
   </div>
@@ -274,10 +277,6 @@
         <h3>Contact</h3>
         <p>Šared 32b, Izola<br>Every day 8:00–19:00<br>Martin: <a href="tel:+38641268030">041 268 030</a><br>Valter: <a href="tel:+38640873444">040 873 444</a></p>
       </div>
-      <div>
-        <h3>Languages</h3>
-        <p><a href="../sl/" lang="sl" hreflang="sl">Slovenščina</a><br><a href="../it/" lang="it" hreflang="it">Italiano</a><br><span>English</span></p>
-      </div>
     </div>
     <p class="copyright">&copy; Kmetija Tavanovo</p>
   </div>
@@ -285,6 +284,29 @@
 
 
 <script>window.I18N = {expand:'Read more', collapse:'Hide', slide:'Image', play:'Resume automatic rotation', pause:'Stop automatic rotation', enlarge:'Enlarge image'};</script>
+<script>
+(function () {
+  var toggle = document.getElementById('lang-toggle');
+  var menu = document.getElementById('lang-menu');
+  if (!toggle || !menu) return;
+
+  function set(open) {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    set(menu.hidden);
+  });
+  document.addEventListener('click', function (e) {
+    if (!menu.hidden && !menu.contains(e.target)) set(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) { set(false); toggle.focus(); }
+  });
+})();
+</script>
 <script>
 (function () {
   var cards = document.querySelectorAll('.story article');
