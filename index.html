@@ -3,10 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>Kmetija Tavanovo</title>
-  <meta http-equiv="refresh" content="0; url=sl/">
-  <link rel="canonical" href="sl/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <noscript><meta http-equiv="refresh" content="0; url=sl/"></noscript>
+  <script>
+    (function () {
+      var l = (navigator.language || 'sl').toLowerCase();
+      var to = l.indexOf('sl') === 0 ? 'sl/' : l.indexOf('it') === 0 ? 'it/' : 'en/';
+      location.replace(to);
+    })();
+  </script>
 </head>
 <body>
-  <p><a href="sl/">Nadaljuj na slovensko stran</a></p>
+  <p><a href="sl/">Slovenščina</a> · <a href="it/">Italiano</a> · <a href="en/">English</a></p>
 </body>
 </html>

@@ -604,3 +604,24 @@ body.lb-open { overflow: hidden; }
 @media (min-width: 1000px) and (max-width: 1099px) {
   .story { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Header: nav + language switcher */
+.header-right { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+.lang { display: flex; gap: .25rem; }
+.lang a {
+  padding: .2rem .55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: bold;
+  letter-spacing: .04em;
+  text-decoration: none;
+  color: var(--olive-dark);
+}
+.lang a:hover { border-color: var(--gold); }
+.lang a[aria-current="true"] {
+  background: var(--olive-dark);
+  border-color: var(--olive-dark);
+  color: #fff;
+}
+.site-footer a { color: #fff; }

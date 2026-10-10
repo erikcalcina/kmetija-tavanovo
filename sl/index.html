@@ -53,11 +53,18 @@
       <svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg>
       <span>Kmetija Tavanovo</span>
     </a>
+    <div class="header-right">
     <nav class="nav" aria-label="Glavna navigacija">
       <a href="#o-nas">O nas</a>
       <a href="#olje">Olje in cene</a>
       <a href="#kje-kupiti">Kje kupiti</a>
     </nav>
+    <div class="lang" role="group" aria-label="Jezik">
+      <a href="./" lang="sl" hreflang="sl" aria-current="true">SL</a>
+      <a href="../it/" lang="it" hreflang="it">IT</a>
+      <a href="../en/" lang="en" hreflang="en">EN</a>
+    </div>
+    </div>
   </div>
 </header>
 
@@ -273,7 +280,7 @@
       </div>
       <div>
         <h3>Jeziki</h3>
-        <p>Slovenščina<br><span class="soon">Italiano in English – kmalu</span></p>
+        <p><span>Slovenščina</span><br><a href="../it/" lang="it" hreflang="it">Italiano</a><br><a href="../en/" lang="en" hreflang="en">English</a></p>
       </div>
     </div>
     <p class="copyright">&copy; Kmetija Tavanovo</p>
@@ -281,6 +288,7 @@
 </footer>
 
 
+<script>window.I18N = {expand:'Preberi več', collapse:'Skrij', slide:'Slika', play:'Nadaljuj samodejno vrtenje', pause:'Ustavi samodejno vrtenje', enlarge:'Povečaj sliko'};</script>
 <script>
 (function () {
   var cards = document.querySelectorAll('.story article');
@@ -292,7 +300,7 @@
     function set(open) {
       card.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? 'Skrij' : 'Preberi več';
+      btn.textContent = open ? I18N.collapse : I18N.expand;
       body.style.maxHeight = open ? body.scrollHeight + 'px' : '';
     }
     function toggle() { set(!card.classList.contains('open')); }
@@ -327,11 +335,12 @@
   var hovering = false;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var INTERVAL = 5000;
+  playBtn.dataset.paused = 'false';
 
   var dots = slides.map(function (_, i) {
     var b = document.createElement('button');
     b.type = 'button';
-    b.setAttribute('aria-label', 'Slika ' + (i + 1));
+    b.setAttribute('aria-label', I18N.slide + ' ' + (i + 1));
     b.addEventListener('click', function () { go(i); });
     dotsBox.appendChild(b);
     return b;
@@ -371,8 +380,9 @@
 
   playBtn.addEventListener('click', function () {
     userPaused = !userPaused;
+    playBtn.dataset.paused = userPaused ? 'true' : 'false';
     playBtn.innerHTML = userPaused ? '&#9654;' : '&#10074;&#10074;';
-    playBtn.setAttribute('aria-label', userPaused ? 'Nadaljuj samodejno vrtenje' : 'Ustavi samodejno vrtenje');
+    playBtn.setAttribute('aria-label', userPaused ? I18N.play : I18N.pause);
     start();
   });
 
@@ -388,6 +398,7 @@
 
   if (reduce) {
     userPaused = true;
+    playBtn.dataset.paused = 'true';
     playBtn.hidden = true;
   }
 
@@ -430,7 +441,7 @@
 
   function open(i, from) {
     opener = from;
-    wasPlaying = playBtn && !playBtn.hidden && playBtn.getAttribute('aria-label').indexOf('Ustavi') === 0;
+    wasPlaying = playBtn && !playBtn.hidden && playBtn.dataset.paused !== 'true';
     if (wasPlaying) playBtn.click();
     show(i);
     box.hidden = false;
@@ -451,7 +462,7 @@
   imgs.forEach(function (img, i) {
     img.tabIndex = 0;
     img.setAttribute('role', 'button');
-    img.setAttribute('aria-label', 'Povečaj sliko: ' + img.alt);
+    img.setAttribute('aria-label', I18N.enlarge + ': ' + img.alt);
     img.addEventListener('click', function () { open(i, img); });
     img.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i, img); }

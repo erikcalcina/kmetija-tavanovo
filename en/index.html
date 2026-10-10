@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olive Oil – Kmetija Tavanovo</title>
+  <meta name="description" content="Olive oil from the Tavanovo farm. Available in 1 l and 5 l sizes, sold exclusively at our farm.">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Shared SVG symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="leaf" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 3C9 3 4 9.5 4 16.5c0 1.2.2 2.4.6 3.5.5-4.2 3.2-8.3 8.4-10.3-4.2 3.2-6.4 6.5-7.4 11.3 1 .3 2 .5 3.1.5C16 21.5 21 14.5 20 3z"/>
+    </symbol>
+    <symbol id="bottle" viewBox="0 0 60 140">
+      <rect x="23" y="2" width="14" height="11" rx="2" fill="#2f3a1a"/>
+      <path fill="#6b7d2f" d="M25 13h10v20c0 7 15 12 15 29v68c0 4-3 8-8 8H18c-5 0-8-4-8-8V62c0-17 15-22 15-29z"/>
+      <rect x="16" y="70" width="28" height="44" rx="3" fill="#faf6ea"/>
+      <g transform="translate(24 80) scale(.5)"><path fill="#4a5a2a" d="M20 3C9 3 4 9.5 4 16.5c0 1.2.2 2.4.6 3.5.5-4.2 3.2-8.3 8.4-10.3-4.2 3.2-6.4 6.5-7.4 11.3 1 .3 2 .5 3.1.5C16 21.5 21 14.5 20 3z"/></g>
+      <rect x="20" y="100" width="20" height="3" rx="1.5" fill="#b8892b"/>
+      <path d="M17 66c0-8 8-10 8-22" stroke="#fff" stroke-opacity=".25" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="canister" viewBox="0 0 100 130">
+      <rect x="18" y="4" width="44" height="22" rx="11" fill="none" stroke="#2f3a1a" stroke-width="6"/>
+      <rect x="66" y="12" width="16" height="14" rx="3" fill="#2f3a1a"/>
+      <rect x="8" y="24" width="84" height="100" rx="12" fill="#6b7d2f"/>
+      <rect x="22" y="48" width="56" height="52" rx="4" fill="#faf6ea"/>
+      <g transform="translate(38 54) scale(1)"><path fill="#4a5a2a" d="M20 3C9 3 4 9.5 4 16.5c0 1.2.2 2.4.6 3.5.5-4.2 3.2-8.3 8.4-10.3-4.2 3.2-6.4 6.5-7.4 11.3 1 .3 2 .5 3.1.5C16 21.5 21 14.5 20 3z"/></g>
+      <rect x="32" y="86" width="36" height="4" rx="2" fill="#b8892b"/>
+      <path d="M16 36v70" stroke="#fff" stroke-opacity=".2" stroke-width="5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="camera" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M9 2 7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+    </symbol>
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+    </symbol>
+    <symbol id="clock" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.5 5v5.2l4.3 2.6-.8 1.3L11 13V7h1.5z"/>
+    </symbol>
+    <symbol id="phone" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg>
+      <span>Kmetija Tavanovo</span>
+    </a>
+    <div class="header-right">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#o-nas">About us</a>
+      <a href="#olje">Oil and prices</a>
+      <a href="#kje-kupiti">Where to buy</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <a href="../sl/" lang="sl" hreflang="sl">SL</a>
+      <a href="../it/" lang="it" hreflang="it">IT</a>
+      <a href="./" lang="en" hreflang="en" aria-current="true">EN</a>
+    </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <svg class="hero-leaf hero-leaf-a" aria-hidden="true"><use href="#leaf"/></svg>
+    <svg class="hero-leaf hero-leaf-b" aria-hidden="true"><use href="#leaf"/></svg>
+    <svg class="hero-leaf hero-leaf-c" aria-hidden="true"><use href="#leaf"/></svg>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Homemade olive oil</p>
+      <h1>Olive oil from the Tavanovo farm</h1>
+      <p class="hero-text">Available directly at our farm.</p>
+    </div>
+  </section>
+
+  <section id="o-nas">
+    <div class="wrap">
+      <h2><svg class="h-leaf" aria-hidden="true"><use href="#leaf"/></svg>About us</h2>
+
+      <div class="story">
+        <article>
+          <h3>The farm and the grove</h3>
+          <div class="story-body" id="story-1">
+          <p class="hint">What you could write: who we are, since when we have tended the grove, how many trees we have, where the grove lies (position, soil, climate) and why that is good for olives.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          </div>
+          <button class="story-toggle" type="button" aria-expanded="false" aria-controls="story-1">Read more</button>
+        </article>
+
+        <article>
+          <h3>Olive varieties</h3>
+          <div class="story-body" id="story-2">
+          <p class="hint">What you could write: which olive varieties we grow (e.g. Istrska belica, Leccino, Buga, Pendolino, Maurino – list only those you really have), what characterises each (taste, bitterness, pungency, aroma) and what is special about each.</p>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <button class="story-toggle" type="button" aria-expanded="false" aria-controls="story-2">Read more</button>
+        </article>
+
+        <article>
+          <h3>Why we blend varieties</h3>
+          <div class="story-body" id="story-3">
+          <p class="hint">What you could write: why we blend varieties (balanced taste, less bitterness or more pungency, consistent quality year after year), what each variety contributes and what kind of oil the blend produces. Example: one variety brings fruitiness, another pungency.</p>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+          <button class="story-toggle" type="button" aria-expanded="false" aria-controls="story-3">Read more</button>
+        </article>
+
+        <article>
+          <h3>The olive harvest</h3>
+          <div class="story-body" id="story-4">
+          <p class="hint">What you could write: when we harvest (month, ripeness of the fruit), whether we pick by hand or with shakers, how many hours after picking the olives reach the mill and why quick transport matters for quality.</p>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+          </div>
+          <button class="story-toggle" type="button" aria-expanded="false" aria-controls="story-4">Read more</button>
+        </article>
+
+        <article>
+          <h3>Where and how we press</h3>
+          <div class="story-body" id="story-5">
+          <p class="hint">What you could write: which mill we press at and where it is (place, distance from the grove), how the pressing works (washing, crushing, malaxing, separating the oil – e.g. cold pressing below a set temperature) and why that is good for taste, aroma and beneficial compounds.</p>
+          <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+          </div>
+          <button class="story-toggle" type="button" aria-expanded="false" aria-controls="story-5">Read more</button>
+        </article>
+
+        <article>
+          <h3>Storage and use</h3>
+          <div class="story-body" id="story-6">
+          <p class="hint">What you could write: how to store the oil (dark, cool, closed), how long it is best used, what we recommend it for (salads, cooking, dipping) and how to taste it.</p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
+          </div>
+          <button class="story-toggle" type="button" aria-expanded="false" aria-controls="story-6">Read more</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <span></span>
+    <svg class="d-leaf d-l"><use href="#leaf"/></svg>
+    <svg class="d-leaf d-c"><use href="#leaf"/></svg>
+    <svg class="d-leaf d-r"><use href="#leaf"/></svg>
+    <span></span>
+  </div>
+
+  <section class="gallery-section">
+    <div class="wrap">
+      <h2><svg class="h-leaf" aria-hidden="true"><use href="#leaf"/></svg>Glimpses of the farm</h2>
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Glimpses of the farm">
+        <div class="car-track" tabindex="0">
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
+            <img src="../images/preview/hero-grove.jpg" style="object-position: 50% 40%" alt="Olive grove with grass and yellow flowers" loading="lazy">
+            <figcaption>Our olive grove</figcaption>
+          </figure>
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+            <img src="../images/preview/harvest-branches.jpg" style="object-position: 50% 35%" alt="Hands among olive branches with green and dark fruits" loading="lazy">
+            <figcaption>Hand harvesting</figcaption>
+          </figure>
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+            <img src="../images/santomas/oljarna.jpg" style="object-position: 50% 62%" alt="Pile of freshly picked olives in front of the stone tower of the Santomas mill" loading="lazy">
+            <figcaption>Quality cold pressing</figcaption>
+          </figure>
+          <figure class="car-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+            <img src="../images/preview/table-board.jpg" style="object-position: 50% 45%" alt="Board with olive oil, an olive branch, tomatoes, cheese and bread" loading="lazy">
+            <figcaption>On your table</figcaption>
+          </figure>
+        </div>
+
+        <button class="car-btn car-prev" type="button" aria-label="Previous image">&#8249;</button>
+        <button class="car-btn car-next" type="button" aria-label="Next image">&#8250;</button>
+
+        <div class="car-bar">
+          <button class="car-play" type="button" aria-label="Stop automatic rotation">&#10074;&#10074;</button>
+          <div class="car-dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="olje" class="products-section">
+    <div class="wrap">
+      <h2><svg class="h-leaf" aria-hidden="true"><use href="#leaf"/></svg>Oil and prices</h2>
+      <p class="lead">We offer one olive oil in two sizes.</p>
+
+      <div class="products">
+        <article class="product">
+          <svg class="bottle" viewBox="0 0 60 140" role="img" aria-label="Bottle, 1 l"><use href="#bottle"/></svg>
+          <div>
+            <h3>Olive oil</h3>
+            <p class="size">Bottle, 1 l</p>
+            <p class="price">€18.00</p>
+            <p class="per-litre">€18.00 / l</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg class="canister" viewBox="0 0 100 130" role="img" aria-label="Pack, 5 l"><use href="#canister"/></svg>
+          <div>
+            <h3>Olive oil</h3>
+            <p class="size">Pack, 5 l</p>
+            <p class="price">€85.00</p>
+            <p class="per-litre">€17.00 / l</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="notice">
+        <strong>Sales take place exclusively at our farm.</strong>
+        Online ordering and delivery are not available.
+      </p>
+    </div>
+  </section>
+
+  <section id="kje-kupiti" class="where">
+    <div class="wrap">
+      <h2><svg class="h-leaf" aria-hidden="true"><use href="#leaf"/></svg>Where to buy</h2>
+      <p class="lead">You can buy the oil from us at the farm.</p>
+
+      <div class="where-grid">
+        <ul class="contact-cards">
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#pin"/></svg>
+            <div>
+              <h3>Address</h3>
+              <p>Šared 32b<br>Izola</p>
+            </div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#clock"/></svg>
+            <div>
+              <h3>Visits and sales</h3>
+              <p>Every day from 8:00 to 19:00</p>
+            </div>
+          </li>
+          <li>
+            <svg class="icon" aria-hidden="true"><use href="#phone"/></svg>
+            <div>
+              <h3>Phone</h3>
+              <p>Martin: <a href="tel:+38641268030">041 268 030</a><br>Valter: <a href="tel:+38640873444">040 873 444</a></p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="map">
+          <iframe
+            title="Map: Šared 32b, Izola"
+            src="https://maps.google.com/maps?q=%C5%A0ared%2032b%2C%20Izola&amp;output=embed&amp;hl=en"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%C5%A0ared%2032b%2C%20Izola" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><svg class="brand-mark" aria-hidden="true"><use href="#leaf"/></svg>Kmetija Tavanovo</p>
+        <p>Homemade olive oil, available at the farm.</p>
+      </div>
+      <div>
+        <h3>Sales</h3>
+        <p>At the farm only.<br>No online ordering or delivery.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>Šared 32b, Izola<br>Every day 8:00–19:00<br>Martin: <a href="tel:+38641268030">041 268 030</a><br>Valter: <a href="tel:+38640873444">040 873 444</a></p>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <p><a href="../sl/" lang="sl" hreflang="sl">Slovenščina</a><br><a href="../it/" lang="it" hreflang="it">Italiano</a><br><span>English</span></p>
+      </div>
+    </div>
+    <p class="copyright">&copy; Kmetija Tavanovo</p>
+  </div>
+</footer>
+
+
+<script>window.I18N = {expand:'Read more', collapse:'Hide', slide:'Image', play:'Resume automatic rotation', pause:'Stop automatic rotation', enlarge:'Enlarge image'};</script>
+<script>
+(function () {
+  var cards = document.querySelectorAll('.story article');
+  cards.forEach(function (card) {
+    var body = card.querySelector('.story-body');
+    var btn = card.querySelector('.story-toggle');
+    if (!body || !btn) return;
+
+    function set(open) {
+      card.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? I18N.collapse : I18N.expand;
+      body.style.maxHeight = open ? body.scrollHeight + 'px' : '';
+    }
+    function toggle() { set(!card.classList.contains('open')); }
+
+    btn.addEventListener('click', function (e) { e.stopPropagation(); toggle(); });
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a, button')) return;
+      toggle();
+    });
+  });
+  window.addEventListener('resize', function () {
+    document.querySelectorAll('.story article.open .story-body').forEach(function (b) {
+      b.style.maxHeight = b.scrollHeight + 'px';
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  var root = document.querySelector('.carousel');
+  if (!root) return;
+
+  var track = root.querySelector('.car-track');
+  var slides = Array.prototype.slice.call(track.children);
+  var dotsBox = root.querySelector('.car-dots');
+  var playBtn = root.querySelector('.car-play');
+  var n = slides.length;
+  var idx = 0;
+  var timer = null;
+  var userPaused = false;
+  var hovering = false;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var INTERVAL = 5000;
+  playBtn.dataset.paused = 'false';
+
+  var dots = slides.map(function (_, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-label', I18N.slide + ' ' + (i + 1));
+    b.addEventListener('click', function () { go(i); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function render() {
+    dots.forEach(function (d, i) {
+      if (i === idx) d.setAttribute('aria-current', 'true');
+      else d.removeAttribute('aria-current');
+    });
+  }
+
+  function go(i) {
+    idx = (i + n) % n;
+    track.scrollTo({ left: idx * track.clientWidth, behavior: reduce ? 'auto' : 'smooth' });
+    render();
+  }
+
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  function start() {
+    stop();
+    if (reduce || userPaused || hovering || n < 2) return;
+    timer = setInterval(function () { go(idx + 1); }, INTERVAL);
+  }
+
+  var scrollWait;
+  track.addEventListener('scroll', function () {
+    clearTimeout(scrollWait);
+    scrollWait = setTimeout(function () {
+      idx = Math.round(track.scrollLeft / track.clientWidth);
+      render();
+    }, 80);
+  });
+
+  root.querySelector('.car-prev').addEventListener('click', function () { go(idx - 1); start(); });
+  root.querySelector('.car-next').addEventListener('click', function () { go(idx + 1); start(); });
+
+  playBtn.addEventListener('click', function () {
+    userPaused = !userPaused;
+    playBtn.dataset.paused = userPaused ? 'true' : 'false';
+    playBtn.innerHTML = userPaused ? '&#9654;' : '&#10074;&#10074;';
+    playBtn.setAttribute('aria-label', userPaused ? I18N.play : I18N.pause);
+    start();
+  });
+
+  root.addEventListener('mouseenter', function () { hovering = true; stop(); });
+  root.addEventListener('mouseleave', function () { hovering = false; start(); });
+  root.addEventListener('focusin', function () { hovering = true; stop(); });
+  root.addEventListener('focusout', function () { hovering = false; start(); });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') { go(idx + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { go(idx - 1); e.preventDefault(); }
+  });
+  window.addEventListener('resize', function () { track.scrollTo({ left: idx * track.clientWidth, behavior: 'auto' }); });
+
+  if (reduce) {
+    userPaused = true;
+    playBtn.dataset.paused = 'true';
+    playBtn.hidden = true;
+  }
+
+  render();
+  start();
+})();
+</script>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+  <button class="lb-btn lb-close" type="button" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous image">&#8249;</button>
+  <img alt="">
+  <p class="lightbox-caption"></p>
+  <button class="lb-btn lb-next" type="button" aria-label="Next image">&#8250;</button>
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById('lightbox');
+  var root = document.querySelector('.carousel');
+  if (!box || !root) return;
+
+  var big = box.querySelector('img');
+  var cap = box.querySelector('.lightbox-caption');
+  var closeBtn = box.querySelector('.lb-close');
+  var imgs = Array.prototype.slice.call(root.querySelectorAll('.car-slide img'));
+  var playBtn = root.querySelector('.car-play');
+  var current = 0;
+  var opener = null;
+  var wasPlaying = false;
+
+  function show(i) {
+    current = (i + imgs.length) % imgs.length;
+    var el = imgs[current];
+    big.src = el.currentSrc || el.src;
+    big.alt = el.alt;
+    var c = el.parentNode.querySelector('figcaption');
+    cap.textContent = c ? c.textContent : '';
+  }
+
+  function open(i, from) {
+    opener = from;
+    wasPlaying = playBtn && !playBtn.hidden && playBtn.dataset.paused !== 'true';
+    if (wasPlaying) playBtn.click();
+    show(i);
+    box.hidden = false;
+    box.classList.add('open');
+    document.body.classList.add('lb-open');
+    closeBtn.focus();
+  }
+
+  function close() {
+    box.classList.remove('open');
+    box.hidden = true;
+    document.body.classList.remove('lb-open');
+    big.removeAttribute('src');
+    if (wasPlaying && playBtn) playBtn.click();
+    if (opener) opener.focus();
+  }
+
+  imgs.forEach(function (img, i) {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', I18N.enlarge + ': ' + img.alt);
+    img.addEventListener('click', function () { open(i, img); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i, img); }
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', function () { show(current - 1); });
+  box.querySelector('.lb-next').addEventListener('click', function () { show(current + 1); });
+  big.addEventListener('click', close);
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!box.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') show(current + 1);
+    if (e.key === 'ArrowLeft') show(current - 1);
+  });
+})();
+</script>
+
+</body>
+</html>
